@@ -1,0 +1,25 @@
+{
+    "debug.node.autoAttach": "on",
+    "compile-hero.disable-compile-files-on-did-save-code": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#46250f",
+        "titleBar.activeBackground": "#1c0f06",
+        "titleBar.activeForeground": "#e7e7e7",
+        "activityBar.activeBackground": "#46250f",
+        "activityBar.activeBorder": "#176938",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#176938",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "statusBar.background": "#1c0f06",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#46250f",
+        "titleBar.inactiveBackground": "#1c0f0699",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#1c0f06",
+
+}
