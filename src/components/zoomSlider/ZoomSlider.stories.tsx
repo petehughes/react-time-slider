@@ -24,6 +24,10 @@ export const WithSelection = Template.bind({});
 WithSelection.args = { bounds: {from : 50, to:500}, selection: {from:200, to: 300}} as ZoomSliderProps;
 
 
+export const WithSelectionAndZoomed = Template.bind({});
+WithSelectionAndZoomed.args = { bounds: {from : 50, to:500}, selection: {from:200, to: 300}, ZoomScale: 200} as ZoomSliderProps;
+
+
 export const SingleUseMode = Template.bind({});
 SingleUseMode.args = { bounds: {from : 50, to:500}, selection: {from:50, to: 300}, mode: "SingleThumb"} as ZoomSliderProps;
 
