@@ -20,12 +20,28 @@ export const Primary = Template.bind({});
 Primary.args = { range: {from : 50, to:500}} as TimeRangeSliderProps;
 
 
+export const AsTimeFebSelected = Template.bind({});
+AsTimeFebSelected.args = { range: {
+  from : new Date(2000, 0, 0).getTime(), 
+  to:new Date(2000, 11, 31).getTime()}
+ , formatValue: (t:number)=> new Date(t).toDateString()
+ , selection: {  
+    from : new Date(2000, 1, 0).getTime(), 
+    to:new Date(2000, 1, 27).getTime()
+  }
+
+} as TimeRangeSliderProps;
+
+
 export const AsTime = Template.bind({});
 AsTime.args = { range: {
   from : new Date(2000, 0, 0).getTime(), 
   to:new Date(2000, 11, 31).getTime()}
  , formatValue: (t:number)=> new Date(t).toDateString()
+ , 
 } as TimeRangeSliderProps;
+
+
 
 // export const CurrencyDisplay = Template.bind({});
 // CurrencyDisplay.args = { bounds: {from : 50, to:500}, formatValue: (t:number)=> `£${t.toFixed(2)}`} as TimeRangeSlider;

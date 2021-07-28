@@ -5,12 +5,13 @@ import ZoomSlider from '../zoomSlider';
 export interface TimeRangeSliderProps {
     range:Bounds<number>;
     formatValue?:(value:number)=>string;
+    selection?:Bounds<number>;
 };
 
-const TimeRangeSlider: React.FC<TimeRangeSliderProps> = ({range, formatValue}:TimeRangeSliderProps) =>{
+const TimeRangeSlider: React.FC<TimeRangeSliderProps> = ({range, formatValue, selection: _selection}:TimeRangeSliderProps) =>{
     if(!formatValue) formatValue = (a:number)=>a.toString();
     const [zoom, setZoom] = React.useState(range);
-    const [selection, setSelection] = React.useState(range);
+    const [selection, setSelection] = React.useState(_selection ?? range);
 
 
     const updateScale = React.useCallback((val)=>{
@@ -21,8 +22,8 @@ const TimeRangeSlider: React.FC<TimeRangeSliderProps> = ({range, formatValue}:Ti
 
     return <>
         From {formatValue(selection.from)} - {formatValue(selection.to)}
-        <ZoomSlider bounds={range} ZoomRange={zoom} onChange={setSelection}/>
-        <ZoomSlider bounds={range} selection={zoom}  onChange={setZoom} mode="SingleThumb" />
+        <ZoomSlider bounds={zoom} onChange={setSelection} selection={selection}/>
+        <ZoomSlider bounds={range} selection={zoom}  onChange={setZoom} />
     </>
 };
 
