@@ -11,7 +11,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.AsTime = exports.Primary = void 0;
+exports.AsTime = exports.AsTimeFebSelected = exports.Primary = void 0;
 var react_1 = require("react");
 var TimeRangeSlider_1 = require("./TimeRangeSlider");
 exports["default"] = {
@@ -27,6 +27,14 @@ var Template = function (args) { return react_1["default"].createElement(TimeRan
 // Reuse that template for creating different stories
 exports.Primary = Template.bind({});
 exports.Primary.args = { range: { from: 50, to: 500 } };
+exports.AsTimeFebSelected = Template.bind({});
+exports.AsTimeFebSelected.args = { range: {
+        from: new Date(2000, 0, 0).getTime(),
+        to: new Date(2000, 11, 31).getTime()
+    }, formatValue: function (t) { return new Date(t).toDateString(); }, selection: {
+        from: new Date(2000, 1, 0).getTime(),
+        to: new Date(2000, 1, 27).getTime()
+    } };
 exports.AsTime = Template.bind({});
 exports.AsTime.args = { range: {
         from: new Date(2000, 0, 0).getTime(),

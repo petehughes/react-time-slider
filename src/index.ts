@@ -1,3 +1,2 @@
-import Button from "./components/Button";
+export {default} from "./components/TimeRangeSlider"
 
-export { Button };

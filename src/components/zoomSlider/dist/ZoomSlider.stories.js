@@ -11,7 +11,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.SingleUseMode = exports.WithSelection = exports.Primary = void 0;
+exports.SingleUseMode = exports.WithSelectionAndZoomed = exports.WithSelection = exports.Primary = void 0;
 var react_1 = require("react");
 var ZoomSlider_1 = require("./ZoomSlider");
 exports["default"] = {
@@ -29,6 +29,8 @@ exports.Primary = Template.bind({});
 exports.Primary.args = { bounds: { from: 50, to: 500 } };
 exports.WithSelection = Template.bind({});
 exports.WithSelection.args = { bounds: { from: 50, to: 500 }, selection: { from: 200, to: 300 } };
+exports.WithSelectionAndZoomed = Template.bind({});
+exports.WithSelectionAndZoomed.args = { bounds: { from: 50, to: 500 }, selection: { from: 200, to: 300 }, ZoomScale: 200 };
 exports.SingleUseMode = Template.bind({});
 exports.SingleUseMode.args = { bounds: { from: 50, to: 500 }, selection: { from: 50, to: 300 }, mode: "SingleThumb" };
 // export const CurrencyDisplay = Template.bind({});

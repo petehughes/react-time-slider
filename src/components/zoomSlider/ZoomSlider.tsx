@@ -84,7 +84,7 @@ export interface ZoomSliderProps {
   height?:number;
   borderSize?:number
   mode?: ZoomSliderModel;
-  ZoomRange?: Bounds<number>;
+  ZoomScale?: number;
 }
 
 type ZoomSliderComponent = React.FC<ZoomSliderProps>;
